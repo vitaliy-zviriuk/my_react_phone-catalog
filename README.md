@@ -17,3 +17,8 @@ In this project, I developed a phone catalog using modern web development techno
 - **SCSS**: Styled the application using SCSS for modular and maintainable CSS, allowing for better organization and reuse of styles.  
 - **Responsive Design**: Ensured the website is fully responsive, adapting to different screen sizes and providing a consistent experience on mobile, tablet, and desktop devices.  
 -**Git**: Used Git for version control, tracking changes and collaborating effectively during the development process.  
+
+## To run project: 
+ - git clone;
+ - npm install;
+ - npm start;
