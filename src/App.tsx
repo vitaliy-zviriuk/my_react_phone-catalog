@@ -1,21 +1,39 @@
-import React from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
 import './App.scss';
 
-interface Props {
-  onClick: () => void;
-  children: React.ReactNode;
-}
+import { Header } from './Components/Header/Header';
+import { Footer } from './Components/Footer/Footer';
+import { ChangeColor } from './Components/ChangeColor/ChangeColor';
+import classNames from 'classnames';
 
-export const Provider: React.FC<Props> = React.memo(({ onClick, children }) => (
-  <button type="button" onClick={onClick}>
-    {children}
-  </button>
-));
+export const App = () => {
+  const location = useLocation();
+  const { pathname } = location;
+  const menuBurger = pathname === '/menu';
 
-export const App: React.FC = () => {
   return (
-    <div className="starter">
-      <Provider onClick={() => ({})}>TodoList</Provider>
+    <div className="App">
+      <header className="header">
+        <Header />
+      </header>
+
+      <div>
+        <ChangeColor />
+      </div>
+
+      <main
+        className={classNames('main', {
+          'main--with-burger': menuBurger,
+        })}
+      >
+        <Outlet />
+      </main>
+
+      {!menuBurger && (
+        <footer className="footer footer__container">
+          <Footer />
+        </footer>
+      )}
     </div>
   );
 };
