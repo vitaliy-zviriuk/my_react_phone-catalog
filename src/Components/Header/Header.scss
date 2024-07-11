@@ -62,7 +62,9 @@
   &__link {
     @include uppercase-style;
 
+    height: 64px;
     position: relative;
+    align-content: center;
     text-decoration: none;
 
     &.is-active {
@@ -148,6 +150,3 @@
     }
   }
 }
-
-
-

@@ -21,7 +21,6 @@ footer {
 
 .main {
   min-height: 40vh;
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,9 +46,7 @@ footer {
   }
 
   &--with-burger {
-    margin-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
+    display: none;
   }
 }
 
@@ -71,8 +68,4 @@ button {
   font-size: inherit; 
   cursor: pointer;
   outline: none; 
-}
-
-.with-menu {
-  overflow: hidden;
 }

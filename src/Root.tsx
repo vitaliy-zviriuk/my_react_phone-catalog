@@ -10,7 +10,7 @@ import { AccessoriesPage } from './pages/ProductPages/AccessoriesPage';
 import { ProductDetailsPage } from './pages/ProductDetailsPage/ProductDetailsPage';
 import { CartPage } from './pages/CartPage/CartPage';
 import { FavoritesPage } from './pages/FavoritesPage/FavoritesPage';
-import { MenuPage } from './pages/MenuPage/MenuPage';
+// import { MenuPage } from './pages/MenuPage/MenuPage';
 
 export const Root = () => (
   <ProductProvider>
@@ -33,7 +33,7 @@ export const Root = () => (
           <Route path="/product/:productId" element={<ProductDetailsPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
-          <Route path="/menu" element={<MenuPage />} />
+          {/* <Route path="/menu" element={<MenuPage />} /> */}
           <Route path="*" element={<NoResults />} />
         </Route>
       </Routes>

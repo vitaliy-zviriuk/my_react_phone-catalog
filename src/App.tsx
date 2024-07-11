@@ -5,6 +5,8 @@ import { Header } from './Components/Header/Header';
 import { Footer } from './Components/Footer/Footer';
 import { ChangeColor } from './Components/ChangeColor/ChangeColor';
 import classNames from 'classnames';
+import { MenuPage } from './pages/MenuPage/MenuPage';
+// import { useEffect } from 'react';
 
 export const App = () => {
   const location = useLocation();
@@ -17,15 +19,13 @@ export const App = () => {
         <Header />
       </header>
 
+      <MenuPage />
+
       <div>
         <ChangeColor />
       </div>
 
-      <main
-        className={classNames('main', {
-          'main--with-burger': menuBurger,
-        })}
-      >
+      <main className={classNames('main', { 'main--with-burger': menuBurger })}>
         <Outlet />
       </main>
 
