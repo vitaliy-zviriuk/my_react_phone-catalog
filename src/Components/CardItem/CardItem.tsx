@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { ProductContext } from '../../helper/ProductContext';
 import './CardItem.scss';
 import { Product } from '../../helper/Product';
@@ -30,11 +30,28 @@ export const CartItem = () => {
     setCard(updateCard);
   };
 
+  useEffect(() => {
+    const applyInvertFilter = () => {
+      const colorScheme = localStorage.getItem('colorScheme');
+
+      const invertValue =
+        colorScheme === 'dark' ? 'invert(100%)' : 'invert(0%)';
+
+      document.querySelectorAll('.invert').forEach(img => {
+        const newColor = img as HTMLElement;
+
+        newColor.style.filter = invertValue;
+      });
+    };
+
+    applyInvertFilter();
+  }, [card]);
+
   return card.map(c => (
     <div className="cardItem" key={c.id}>
       <div className="cardItem__first-row">
         <button className="cardItem__button" onClick={() => removeCart(c)}>
-          <img className="cardItem__button-icon" src="img/Close.png" />
+          <img className="cardItem__button-icon invert" src="img/Close.png" />
         </button>
         <div className="cardItem__photo-box">
           <img

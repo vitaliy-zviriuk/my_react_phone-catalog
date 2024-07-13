@@ -93,14 +93,16 @@ export const Pagination: React.FC<Props> = ({
   };
 
   useEffect(() => {
+    onChangeProducts(filteredProducts.length);
+  }, [filteredProducts, onChangeProducts]);
+
+  useEffect(() => {
     const newPages = getNewPages(+currentPage, pages);
 
     if (JSON.stringify(neededPages) !== JSON.stringify(newPages)) {
       setNeededPages(newPages);
     }
-
-    onChangeProducts(filteredProducts.length);
-  }, [filteredProducts, onChangeProducts]);
+  }, [perPage]);
 
   return (
     <>
