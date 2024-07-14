@@ -14,7 +14,7 @@ export const Footer = () => {
     <div className="footer__items">
       <div className="footer__logo">
         <img
-          src="./img/NiceGadgets.png"
+          src="img/NiceGadgets.svg"
           alt="icon"
           className="footer__icon invert"
         />

@@ -104,7 +104,7 @@ export const ProductCard = ({ product, sectionType }: Props) => {
                 />
               ) : (
                 <img
-                  src="./img/WhiteHurt.png"
+                  src="img/WhiteHurt.svg.svg"
                   alt="favourites"
                   className="card__favor-icon"
                 />

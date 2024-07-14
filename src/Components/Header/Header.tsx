@@ -20,13 +20,13 @@ export const Header = () => {
     <>
       <div className="header__items">
         <div className="header__items-left">
-          <div className="header__logo">
+          <Link to="/" className="header__logo">
             <img
-              src="img/NiceGadgets.png"
+              src="img/NiceGadgets.svg"
               alt="icon"
               className="header__icon invert"
             />
-          </div>
+          </Link>
           <nav className="header__links">
             <NavLink
               to="/"
@@ -74,7 +74,11 @@ export const Header = () => {
               })
             }
           >
-            <img src="img/WhiteHurt.png" alt="favorites" className="invert" />
+            <img
+              src="img/WhiteHurt.svg.svg"
+              alt="favorites"
+              className="invert"
+            />
             {!!favorites.length && (
               <div className="header__amount-box favor__amount-box">
                 <div className="favor__amount">{favorites.length}</div>
@@ -90,7 +94,7 @@ export const Header = () => {
             }
           >
             <img
-              src="img/ShoppingBag(Cart).png"
+              src="img/Shoppingbag(Cart).svg.svg"
               alt="cart"
               className="invert"
             />
@@ -104,11 +108,11 @@ export const Header = () => {
 
         {!isRightPath ? (
           <Link className="header__menu" to="menu">
-            <img className="header__menu-icon" src="img/Union.png" />
+            <img className="header__menu-icon invert" src="img/Menu.svg" />
           </Link>
         ) : (
           <Link className="header__menu" to="/">
-            <img className="header__menu-icon" src="img/Christ.png" />
+            <img className="header__menu-icon invert" src="img/Close.svg" />
           </Link>
         )}
       </div>

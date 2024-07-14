@@ -6,7 +6,6 @@ import { Footer } from './Components/Footer/Footer';
 import { ChangeColor } from './Components/ChangeColor/ChangeColor';
 import classNames from 'classnames';
 import { MenuPage } from './pages/MenuPage/MenuPage';
-// import { useEffect } from 'react';
 
 export const App = () => {
   const location = useLocation();

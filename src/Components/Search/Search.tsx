@@ -31,7 +31,7 @@ export const Search = () => {
 
   return (
     <div className="search">
-      {!query && <img className="search__icon" src="img/Search.png" />}
+      {!query && <img className="search__icon" src="img/Search.svg" />}
 
       <input
         className="search__input"

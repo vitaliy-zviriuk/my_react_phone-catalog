@@ -55,7 +55,11 @@ export const MenuPage = () => {
         <div className="menuPage__favorcart">
           <div className="menuPage__menu-items">
             <Link to="/favorites" className="menuPage__favor favor">
-              <img src="img/WhiteHurt.png" alt="favorites" />
+              <img
+                src="img/WhiteHurt.svg.svg"
+                alt="favorites"
+                className="invert"
+              />
               {!!favorites.length && (
                 <div className="menuPage__amount-box favor__amount-box">
                   <div className="favor__amount">{favorites.length}</div>
@@ -63,7 +67,11 @@ export const MenuPage = () => {
               )}
             </Link>
             <Link to="/cart" className="menuPage__favor favor">
-              <img src="img/ShoppingBag(Cart).png" alt="cart" />
+              <img
+                src="img/Shoppingbag(Cart).svg.svg"
+                alt="cart"
+                className="invert"
+              />
               {!!card.length && (
                 <div className="menuPage__amount-box favor__amount-box">
                   <div className="favor__amount">{card.length}</div>
