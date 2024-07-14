@@ -37,6 +37,7 @@
  
   &__link {
     @include uppercase-style;
+    text-transform: uppercase;
 
     text-decoration: none;
     &.is-active {
