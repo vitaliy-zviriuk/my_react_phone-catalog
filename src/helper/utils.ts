@@ -46,7 +46,7 @@ export function getNewPages(currentPage: number, pages: number[]) {
   let endIndex = 0;
 
   if (pages.length - currentPage <= 2) {
-    startIndex = pages.length - 4;
+    startIndex = pages.length - 4 < 0 ? 0 : pages.length - 4;
     endIndex = pages.length;
   } else {
     startIndex = Math.max(0, +currentPage - 2);

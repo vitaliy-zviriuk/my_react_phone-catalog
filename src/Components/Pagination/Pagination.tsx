@@ -45,6 +45,8 @@ export const Pagination: React.FC<Props> = ({
 
   const filteredByQuery = useMemo(() => {
     if (!appliedQuery || appliedQuery === prevQuery) {
+      setPrevQuery('');
+
       return products;
     }
 
@@ -102,7 +104,7 @@ export const Pagination: React.FC<Props> = ({
     if (JSON.stringify(neededPages) !== JSON.stringify(newPages)) {
       setNeededPages(newPages);
     }
-  }, [perPage]);
+  }, [perPage, total]);
 
   return (
     <>
