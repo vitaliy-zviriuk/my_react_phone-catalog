@@ -1,6 +1,6 @@
  ### React Phone Catalog  
- - [DEMO](https://zvir91.github.io/my_react_phone-catalog/);    
- - [GitHub](https://github.com/zvir91/my_react_phone-catalog);
+ - [DEMO](https://vitaliy-zviriuk.github.io/my_react_phone-catalog/);    
+ - [GitHub](https://github.com/vitaliy-zviriuk/my_react_phone-catalog);
  - [MOCKUP](https://www.figma.com/design/T5ttF21UnT6RRmCQQaZc6L/Phone-catalog-(V2)-Original?node-id=0-1&t=d2lzeNy69eh5XMos-0)    
 
 ## Technologies were used:   
